@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>SIGNUP </title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2>Signup Page</h2>
+            <label for="exampleInputEmail1" class="form-label">NAME</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">EMAIL</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">AGE</label>
+            <input type="text" class="form-control" id="age" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">ADDRESS</label>
+            <input type="text" class="form-control" id="address" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">PASSWORD</label>
+            <input type="password" class="form-control" id="pass" aria-describedby="emailHelp">
+            <button type="button" class="btn btn-primary mt-2" onclick="signup()">Signup</button>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<script>
+    function signup(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var age = document.getElementById("age").value;
+        var address = document.getElementById("address").value;
+        var pass = document.getElementById("pass").value;
+
+
+        localStorage.setItem("name1",name);
+        localStorage.setItem("email1",email);
+        localStorage.setItem("age1",age);
+        localStorage.setItem("address1",address);
+        localStorage.setItem("pass1",pass);
+
+        document.getElementById("name").value ="";
+        document.getElementById("email").value ="";
+        document.getElementById("age").value ="";
+        document.getElementById("address").value ="";
+        document.getElementById("pass").value ="";
+
+        window.location.href ="BSS4Login.html";
+      
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
